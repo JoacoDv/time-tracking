@@ -1,0 +1,354 @@
+
+.rubik-regular {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-family: rubik;
+}
+
+body {
+    background-color: hsl(226, 43%, 10%);
+    color: white;
+    padding: 0 10vw;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4 1fr);
+    grid-row: 1fr 1fr;
+    margin: 180px auto;
+    gap: 20px;
+    width: 1200px;
+}
+
+/* --------USER PANEL-------- */
+
+.user {
+    background-color: hsl(235, 46%, 20%);
+    width: 300px;
+    height: 620px;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    border-radius: 18px;
+}
+
+.user-panel {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 18px;
+    height: 65%;
+    padding: 40px;
+}
+
+.user-panel img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 40px;
+}
+
+.usern-name {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;       
+}
+
+.user-panel p {
+    font-weight: 300;
+    font-size: .8em;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 400;
+}
+
+.menu {
+    padding: 10px 30px ;
+}
+
+label {
+    display: block;
+    margin: 30px 0;
+    opacity: .6;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+label:has(input[type="checkbox"]:checked) {
+    opacity: 1;
+}
+
+input {
+    display: none;
+}
+
+/* ---------------CARDS--------------- */
+
+section {
+    width: 300px;
+    height: 300px;
+    border-radius: 18px;
+}
+
+section:hover:not(.user) {
+    cursor: pointer;
+    filter: brightness(140%);
+}
+
+.padding {
+    height: 80%;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+section img {
+    height: 60px;
+    width: 120px;
+    object-fit: cover;
+    order: 2;
+    overflow: hidden;
+    object-position: right;
+    align-self: flex-end;
+}
+
+.container {
+    width: 100%;
+    height: 1.3em;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.ellipsis {
+    height: 6px;
+    width: 6px;
+    object-fit: cover;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.ellipsis-container {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+#work {
+    display: flex;
+    flex-direction: column-reverse;
+    grid-column: 2;
+    grid-row: 1;
+    background-color: hsl(15, 100%, 70%);
+}
+
+.Work {
+    background-color: hsl(235, 46%, 20%);
+
+}
+
+#play {
+    display: flex;
+    flex-direction: column-reverse;
+    grid-column: 3;
+    grid-row: 1;
+    background-color: hsl(195, 74%, 62%);
+}
+
+.Play {
+    background-color: hsl(235, 46%, 20%);
+
+}
+
+#study {
+    display: flex;
+    flex-direction: column-reverse;
+    grid-column: 4;
+    grid-row: 1;
+    background-color: hsl(348, 100%, 68%);
+}
+
+.Study {
+    background-color: hsl(235, 46%, 20%);
+}
+
+#exercise {
+    display: flex;
+    flex-direction: column-reverse;
+    grid-column: 2;
+    grid-row: 2;
+    background-color: hsl(145, 58%, 55%);
+}
+
+.Exercise {
+    background-color: hsl(235, 46%, 20%);
+}
+
+#social {
+    display: flex;
+    flex-direction: column-reverse;
+    grid-column: 3;
+    grid-row: 2;
+    background-color: hsl(264, 64%, 52%);
+}
+
+.Social {
+    background-color: hsl(235, 46%, 20%);
+}
+
+#selfcare {
+    display: flex;
+    flex-direction: column-reverse;
+    grid-column: 4;
+    grid-row: 2;
+    background-color: hsl(43, 84%, 65%);
+}
+
+.Self {
+    background-color: hsl(235, 46%, 20%);
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: 450;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #8a8fd1;
+}
+
+
+/* -------MOBILE------ */
+
+@media (max-width: 800px) {
+    main {
+        width: 500px;
+        height: auto;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-content: center;
+        margin: 120px auto;
+    }
+
+    .user {
+        height: 240px;
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+    } 
+
+    .user-panel {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-left: 10px;
+        padding-right: 90px;
+        gap: 20px;
+    }
+
+    .user img {
+        height: 80px;
+        width: 80px;
+        margin: 0;
+        order: 1;
+        align-self: start;
+    }
+
+    .usern-name {
+        padding: 0;
+        order: 2;
+    }
+
+    .user p {
+        margin-top: 0;
+    }
+
+
+    .menu {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+
+    label {
+        margin: 0;
+    }
+
+    #work {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #play {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #study {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    #exercise {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    #social {
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+    #selfcare {
+        grid-column: 1;
+        grid-row: 7;
+    }
+
+
+    section {
+        height: 240px;
+        width: 100%;
+    }
+
+  
+    .container {
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+    .hrs {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 0 0;
+    }
+
+    .hrs p {
+        margin-left: auto;
+    }
+
+}
