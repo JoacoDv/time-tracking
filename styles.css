@@ -241,12 +241,13 @@ p {
 
 @media (max-width: 800px) {
     main {
-        width: 500px;
+        width: 100%;
         height: auto;
         grid-template-columns: 1fr;
         justify-content: center;
         align-content: center;
         margin: 120px auto;
+        gap: 10px;
     }
 
     .user {
@@ -260,11 +261,12 @@ p {
         display: flex;
         flex-direction: row-reverse;
         padding-left: 10px;
-        padding-right: 90px;
+        padding-right: 0px;
         gap: 20px;
     }
 
     .user img {
+        margin-left: 10px;
         height: 80px;
         width: 80px;
         margin: 0;
